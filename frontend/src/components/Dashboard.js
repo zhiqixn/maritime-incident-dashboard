@@ -42,8 +42,8 @@ function Dashboard() {
     const fetchData = async () => {
       try {
         const [statsResponse, timelineResponse] = await Promise.all([
-          axios.get('http://localhost:53215/api/incidents/stats'),
-          axios.get(`http://localhost:53215/api/incidents/timeline?granularity=${timeGranularity}`)
+          axios.get('http://localhost:53120/api/incidents/stats'),
+          axios.get(`http://localhost:53120/api/incidents/timeline?granularity=${timeGranularity}`)
         ]);
         setStats(statsResponse.data);
         setTimeline(timelineResponse.data);

@@ -11,7 +11,7 @@ const IncidentCards = () => {
     const fetchIncidents = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:53215/api/incidents?granularity=${timeGranularity}`);
+        const response = await axios.get(`http://localhost:53120/api/incidents?granularity=${timeGranularity}`);
         setIncidents(response.data);
       } catch (error) {
         console.error('Error fetching incidents:', error);
